@@ -1,0 +1,192 @@
+html {
+  font-family: Raleway, "Lucida Grande", Tahoma, Sans-Serif;
+}
+
+body {
+  /* background-color: #c68958; */
+  background-color: #FFC75F;
+  /* background-color: #f7fbff; */
+  /* background-color: black; */
+}
+
+main {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+nav {
+  height: 50px;
+}
+
+.homeHolder {
+  /* width: 100vw; */
+  height: calc(100% + 75px);
+}
+
+.homeHolder h1, .homeHolder h2 {
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.tostiHolderMain {
+  display: flex;
+  width: 95%;
+  max-width: 700px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.tostiHolderMain img {
+  width: 100%;
+  height: auto;
+}
+
+.bottomButtonHolder {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.bottomButtonHolder a {
+  margin: 5px auto;
+  text-decoration: none;
+  color: black;
+}
+
+.buttonGo {
+  display: block;
+  width: 80%;
+  max-width: 350px;
+  height: 50px;
+  margin: 10px auto;
+  border: 1px solid black;
+  background-color: white;
+  font-size: 2rem;
+  line-height: 50px;
+}
+
+/* Options */
+.tostiHolderMainOpties {
+  display: flex;
+  align-items: center;
+  /* flex-flow: column; */
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 95%;
+  max-width: 960px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.opties {
+  position: relative;
+  display: inline-flex;
+  width: calc(50% - 15px);
+  max-width: 250px;
+  color: white;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+   filter: brightness(110%);
+}
+
+.opties:after {
+  display: block;
+  padding-bottom: 100%;
+  content: "";
+}
+
+.opties input[type="radio"] {
+  visibility: hidden;
+  /* width: 50px;
+  height: 50px;
+  text-align: center; */
+  /* background-image: url("../image/check.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; */
+}
+
+.opties input[type="radio"]:checked {
+  visibility: visible;
+}
+
+.textHolderOptions {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: rgba(0, 0, 0, 0.20);
+}
+
+.textHolderOptions p {
+  font-size: 1.5em;
+  line-height: 50px;
+}
+
+.submitButton {
+  margin: 5px auto;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  width: 95%;
+  height: 70px;
+  background-color: white;
+  border: none;
+/* border: 0; */
+border: 1px solid black
+}
+
+.pushButton {
+  width: 100%;
+  height: 75px;
+  background-color: none;
+  opacity: 1
+}
+
+/* javascript elementes */
+/* THese elements will be affected by javascript */
+/* WARNING: These wont work / show when you disable Js */
+.sideScroller {
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+}
+
+.checkMark{
+  background-image: url("../image/check.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* This is a JS only element when Js wont work This will not be used */
+.notVisable{
+  visibility: hidden !important;
+}
