@@ -5,6 +5,7 @@ const port = process.env.PORT || 3000;
 const request = require("request");
 const compression = require("compression");
 const minifyHTML = require("express-minify-html");
+const bodyParser = require('body-parser');
 
 
 
@@ -36,6 +37,7 @@ app.use((req, res, next) => {
 
 // Used to compress with G-zip
 app.use(compression());
+app.use(bodyParser.urlencoded({ extended: false}))
 // set the view engine to ejs
 app.set("view engine", "ejs");
 app.use(express.static("static"));
@@ -44,7 +46,7 @@ app.get("/", (req, res) => {
     title: "Tosti lijst"
   });
 })
-
+app.post('/bon', bon)
 app.get("/sandwich", (req, res) => {
   const data = [
     {
@@ -128,6 +130,24 @@ app.get("/sandwich", (req, res) => {
     bread: data[0].options,
     topping:data[1].options,
   });
+
+
 });
 
+function bon(req, res) {
+const brood = req.body.brood;
+const zoet = req.body.zoet;
+const data = req.body;
+const dataArr = Array.from(data);
+
+console.log(typeof dataArr);
+
+console.log(brood , zoet);
+res.render('pages/bon.ejs', {
+  title: "Uw boodschappen lijst",
+  data: dataArr,
+  brood: brood,
+  zoet: zoet
+})
+}
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

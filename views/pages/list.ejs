@@ -5,7 +5,7 @@
     <section class="homeHolder">
       <h1 class="">1/5 Kies uw brood</h1>
 
-      <form class="tostiHolderMainOpties" id="form" action="index.html" method="post">
+      <form class="tostiHolderMainOpties" id="form" action="/bon" method="post">
         <!-- This will be  -->
         <div class="sideScroller">
           <% bread.forEach(function(data){ %>
@@ -14,7 +14,7 @@
             <div class="textHolderOptions">
               <p><%= data.name %></p>
             </div>
-            <input id="<%= data.name %>" type="radio" name="<%= data.value %>" class="check-with-label" value="">
+            <input id="<%= data.name %>" type="radio" name="<%= data.value %>" class="check-with-label" value="<%= data.name %>">
           </label>
           <% }) %>
         </div>
@@ -29,12 +29,12 @@
           <div class="textHolderOptions">
             <p><%= data.name %></p>
           </div>
-          <input id="<%= data.name %>" type="radio" name="<%= data.value %>" class="check-with-label" value="">
+          <input id="<%= data.name %>" type="radio" name="<%= data.value %>" class="check-with-label" value="<%= data.name %>">
         </label>
         <% }) %>
               </div>
 
-      <button type="submit" name="button" class="submitButton borderRadius hoverShadow transition">Maak bonnetjes</button>
+      <button type="submit" name="button" value="submit" class="submitButton borderRadius hoverShadow transition">Naar je lijst</button>
 
       </form>
       <!-- <div class="pushButton"></div>

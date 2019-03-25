@@ -160,6 +160,16 @@ border: 1px solid black
   opacity: 1
 }
 
+.bonHolder{
+  width: 95%;
+  min-height: 200px;
+  height: auto;
+  margin: 0 auto;
+  background-color: red;
+}
+
+
+
 /* javascript elementes */
 /* THese elements will be affected by javascript */
 /* WARNING: These wont work / show when you disable Js */
