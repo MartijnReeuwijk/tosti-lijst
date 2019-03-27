@@ -24,7 +24,8 @@
   function removeVis() {
     const vis = document.getElementsByClassName('check-with-label')
     const visArray = Array.from(vis);
-    visArray.forEach(elem => {
+
+    visArray.forEach(function(elem){
         elem.classList.add('notVisable')
     });
   }
@@ -41,7 +42,7 @@ function overlay(a , b) {
     const overlay = document.getElementsByClassName(a)
     const htmlObject = document.getElementsByClassName(b)
     const selectedArray = Array.from(htmlObject);
-    selectedArray.forEach(overlay => {
+    selectedArray.forEach(function(overlay){
       overlay.classList.remove('fadeOut')
     });
     overlay[0].classList.add('fadeOut')

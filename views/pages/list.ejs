@@ -9,10 +9,12 @@
         <!-- This will be  -->
         <div class="sideScroller">
           <% bread.forEach(function(data){ %>
-          <label  for="<%= data.name %>" data-value="<%= data.name %>" data-type="<%= data.value %>" style="background-image: url(<%= data.url %>)" onclick="overlay(this.dataset.value, this.dataset.type)" class=" opties label-for-check borderRadius hoverShadow transition">
+          <label for="<%= data.name %>" data-value="<%= data.name %>" data-type="<%= data.value %>" style="background-image: url(<%= data.url %>)" onclick="overlay(this.dataset.value, this.dataset.type)" class=" opties label-for-check borderRadius hoverShadow transition">
             <div class="overlay transition fadeOut <%= data.name %>  <%= data.value %>"></div>
             <div class="textHolderOptions">
-              <p><%= data.name %></p>
+              <p>
+                <%= data.name %>
+              </p>
             </div>
             <input id="<%= data.name %>" type="radio" name="<%= data.value %>" class="check-with-label" value="<%= data.name %>">
           </label>
@@ -20,29 +22,23 @@
         </div>
 
         <h2 class="">2/5 Kies uw Topping</h2>
-<!-- Needs to be better with the functions from data -->
-<div class="sideScroller">
+        <!-- Needs to be better with the functions from data -->
+        <div class="sideScroller">
 
-        <% topping.forEach(function(data){ %>
-        <label  for="<%= data.name %>" data-value="<%= data.name %>" data-type="<%= data.value %>" style="background-image: url(<%= data.url %>)" onclick="overlay(this.dataset.value, this.dataset.type)" class=" opties label-for-check borderRadius hoverShadow transition">
-          <div class="overlay transition fadeOut <%= data.name %>  <%= data.value %>"></div>
-          <div class="textHolderOptions">
-            <p><%= data.name %></p>
-          </div>
-          <input id="<%= data.name %>" type="radio" name="<%= data.value %>" class="check-with-label" value="<%= data.name %>">
-        </label>
-        <% }) %>
-              </div>
-
-      <button type="submit" name="button" value="submit" class="submitButton borderRadius hoverShadow transition">Naar je lijst</button>
-
+          <% topping.forEach(function(data){ %>
+          <label for="<%= data.name %>" data-value="<%= data.name %>" data-type="<%= data.value %>" style="background-image: url(<%= data.url %>)" onclick="overlay(this.dataset.value, this.dataset.type)" class=" opties label-for-check borderRadius hoverShadow transition">
+            <div class="overlay transition fadeOut <%= data.name %>  <%= data.value %>"></div>
+            <div class="textHolderOptions">
+              <p>
+                <%= data.name %>
+              </p>
+            </div>
+            <input id="<%= data.name %>" type="radio" name="<%= data.value %>" class="check-with-label" value="<%= data.name %>">
+          </label>
+          <% }) %>
+        </div>
+        <button type="submit" name="button" value="submit" class="submitButton borderRadius hoverShadow transition">Naar je lijst</button>
       </form>
-      <!-- <div class="pushButton"></div>
-      <div class="bottomButtonHolder">
-        <a href="#Next" class="buttonGo borderRadius hoverShadow transition" type="button" name="button">
-          Topping #
-        </a>
-      </div> -->
     </section>
   </main>
   <script src="javascript/script.js" charset="utf-8"></script>

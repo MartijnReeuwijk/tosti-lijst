@@ -6,6 +6,8 @@ const request = require("request");
 const compression = require("compression");
 const minifyHTML = require("express-minify-html");
 const bodyParser = require('body-parser');
+const data = require('./data.json');
+console.log(data);
 
 
 
@@ -43,6 +45,11 @@ app.set("view engine", "ejs");
 app.use(express.static("static"));
 app.get("/", (req, res) => {
   res.render("pages/index", {
+    title: "Tosti lijst"
+  });
+})
+app.get("/fav", (req, res) => {
+  res.render("pages/fav", {
     title: "Tosti lijst"
   });
 })
@@ -135,19 +142,19 @@ app.get("/sandwich", (req, res) => {
 });
 
 function bon(req, res) {
-const brood = req.body.brood;
-const zoet = req.body.zoet;
-const data = req.body;
-const dataArr = Array.from(data);
+  const brood = req.body.brood;
+  const zoet = req.body.zoet;
+  const data = req.body;
+  const dataArr = Array.from(data);
 
-console.log(typeof dataArr);
+  console.log(typeof dataArr);
 
-console.log(brood , zoet);
-res.render('pages/bon.ejs', {
-  title: "Uw boodschappen lijst",
-  data: dataArr,
-  brood: brood,
-  zoet: zoet
-})
+  console.log(brood , zoet);
+  res.render('pages/bon.ejs', {
+    title: "Uw boodschappen lijst",
+    data: dataArr,
+    brood: brood,
+    zoet: zoet
+  })
 }
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
