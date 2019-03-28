@@ -144,15 +144,14 @@ app.get("/sandwich", (req, res) => {
 function bon(req, res) {
   const brood = req.body.brood;
   const zoet = req.body.zoet;
-  const data = req.body;
-  const dataArr = Array.from(data);
-
-  console.log(typeof dataArr);
-
+  // const data = req.body;
+  // console.log(typeof data);
+  // console.log(data);
+// Make data array so it can make more tosties
   console.log(brood , zoet);
   res.render('pages/bon.ejs', {
     title: "Uw boodschappen lijst",
-    data: dataArr,
+    // data: data,
     brood: brood,
     zoet: zoet
   })

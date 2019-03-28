@@ -3,17 +3,17 @@
 <body id="body">
   <main>
     <section class="homeHolder">
-      <h1 class="">1/5 Kies uw brood</h1>
 
       <form class="tostiHolderMainOpties" id="form" action="/bon" method="post">
+        <h1 class="">1/5 Kies uw brood</h1>
         <!-- This will be  -->
         <div class="sideScroller">
           <% bread.forEach(function(data){ %>
           <label for="<%= data.name %>" data-value="<%= data.name %>" data-type="<%= data.value %>" style="background-image: url(<%= data.url %>)" onclick="overlay(this.dataset.value, this.dataset.type)" class=" opties label-for-check borderRadius hoverShadow transition">
             <div class="overlay transition fadeOut <%= data.name %>  <%= data.value %>"></div>
             <div class="textHolderOptions">
-              <p>
-                <%= data.name %>
+              <p >
+                <%= data.name %> brood
               </p>
             </div>
             <input id="<%= data.name %>" type="radio" name="<%= data.value %>" class="check-with-label" value="<%= data.name %>">

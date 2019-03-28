@@ -1,5 +1,6 @@
 html {
   font-family: Raleway, "Lucida Grande", Tahoma, Sans-Serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -21,6 +22,17 @@ nav {
 .homeHolder {
   /* width: 100vw; */
   height: calc(100% + 75px);
+}
+.homeHolderIframePusher{
+  width: 100%;
+  height: 300px;
+}
+.homeHolder iframe{
+  width: 100%;
+  border-top: 1px solid black;
+  height: 300px;
+  /* bottom: 0;
+  position: fixed; */
 }
 
 .homeHolder h1, .homeHolder h2 {
@@ -134,7 +146,7 @@ nav {
   height: 50px;
   text-align: center;
   text-transform: capitalize;
-  background-color: rgba(0, 0, 0, 0.20);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .textHolderOptions p {
@@ -165,11 +177,45 @@ border: 1px solid black
 .bonHolder{
   width: 95%;
   min-height: 200px;
+  max-width: 500px;
   height: auto;
   margin: 0 auto;
   background-color: red;
+  position: relative;
 }
+.bonHolder span{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.bonInner{
+  padding: 5px;
+}
+.bon{
+  width: calc(100% - 30px);
+  height: 75px;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
 
+}
+.bonImage{
+  display: inline-flex;
+  height: 75px;
+  width: 75px;
+  background-color: green;
+}
+.bon h3 {
+  text-transform: capitalize;
+}
+.bon input[type="number"]{
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
 
 
 /* javascript elementes */

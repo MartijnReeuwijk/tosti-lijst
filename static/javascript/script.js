@@ -1,7 +1,7 @@
 (function() {
   "use strict";
   function buttonPlace() {
-    const body = document.getElementById("body");
+    var body = document.getElementById("body");
     body.innerHTML += `
     <div class="pushButton"></div>
       <div class="bottomButtonHolder transition">
@@ -22,8 +22,8 @@
 
 
   function removeVis() {
-    const vis = document.getElementsByClassName('check-with-label')
-    const visArray = Array.from(vis);
+    var vis = document.getElementsByClassName('check-with-label')
+    var visArray = Array.from(vis);
 
     visArray.forEach(function(elem){
         elem.classList.add('notVisable')
@@ -39,9 +39,9 @@
   buttonPlace();
 })();
 function overlay(a , b) {
-    const overlay = document.getElementsByClassName(a)
-    const htmlObject = document.getElementsByClassName(b)
-    const selectedArray = Array.from(htmlObject);
+    var overlay = document.getElementsByClassName(a)
+    var htmlObject = document.getElementsByClassName(b)
+    var selectedArray = Array.from(htmlObject);
     selectedArray.forEach(function(overlay){
       overlay.classList.remove('fadeOut')
     });
