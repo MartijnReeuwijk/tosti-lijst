@@ -1,6 +1,7 @@
 html {
-  font-family: Raleway, "Lucida Grande", Tahoma, Sans-Serif;
   box-sizing: border-box;
+
+  font-family: Raleway, "Lucida Grande", Tahoma, Sans-Serif;
 }
 
 body {
@@ -29,8 +30,9 @@ nav {
 }
 .homeHolder iframe{
   width: 100%;
-  border-top: 1px solid black;
   height: 300px;
+
+  border-top: 1px solid black;
   /* bottom: 0;
   position: fixed; */
 }
@@ -38,17 +40,23 @@ nav {
 .homeHolder h1, .homeHolder h2 {
   width: 100%;
   margin: 10px 0;
+
   text-align: center;
+
   border-bottom: 1px solid black;
+
   font-size: 40px;
+  font-size: 2.500em;
   line-height: 50px;
 }
 
 .tostiHolderMain {
   display: flex;
+
   width: 95%;
   max-width: 700px;
   margin: 0 auto;
+
   vertical-align: middle;
 }
 
@@ -60,9 +68,12 @@ nav {
 .bottomButtonHolder {
   position: fixed;
   bottom: 0;
+
   width: 100%;
   padding: 5px 0;
+
   text-align: center;
+
   background-color: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
     0 1px 2px rgba(0, 0, 0, 0.24);
@@ -70,18 +81,24 @@ nav {
 
 .bottomButtonHolder a {
   margin: 5px auto;
+
   text-decoration: none;
+
   color: black;
 }
 
 .buttonGo {
   display: block;
+
   width: 80%;
   max-width: 350px;
   height: 50px;
   margin: 10px auto;
+
   border: 1px solid black;
   background-color: white;
+
+  font-size: 32px;
   font-size: 2rem;
   line-height: 50px;
 }
@@ -90,36 +107,44 @@ nav {
 .tostiHolderMainOpties {
   display: flex;
   align-items: center;
-  /* flex-flow: column; */
   flex-wrap: wrap;
   justify-content: center;
+
   width: 95%;
   max-width: 960px;
   margin: 0 auto;
+
   vertical-align: middle;
 }
 
 .opties {
   position: relative;
+
   display: inline-flex;
+
   width: calc(50% - 15px);
   max-width: 250px;
-  color: white;
   margin: 5px;
+
   cursor: pointer;
+
+  color: white;
   border: 1px solid black;
   /* Rgb geen rgba */
   background-color: rgb(81, 66, 55);
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center;
   background-clip: border-box;
+  background-size: cover;
+
    filter: brightness(110%);
 }
 
 .opties:after {
   display: block;
+
   padding-bottom: 100%;
+
   content: "";
 }
 
@@ -142,46 +167,62 @@ nav {
 .textHolderOptions {
   position: absolute;
   bottom: 0;
+
   width: 100%;
   height: 50px;
+
   text-align: center;
   text-transform: capitalize;
+
   background-color: rgba(0, 0, 0, 0.35);
 }
 
 .textHolderOptions p {
+  font-size: 24px;
   font-size: 1.5em;
   line-height: 50px;
 }
 
 .submitButton {
-  margin: 5px auto;
-  text-decoration: none;
-  color: black;
-  font-size: 30px;
   width: 95%;
   height: 70px;
-  background-color: white;
+  margin: 5px auto;
+
+  text-decoration: none;
+
+  color: black;
   border: none;
-/* border: 0; */
-border: 1px solid black
+
+border: 1px solid black;
+  background-color: white;
+
+  font-size: 30px;
+  font-size: 1.875em;
 }
 
 .pushButton {
   width: 100%;
   height: 75px;
+
+  opacity: 1;
   background-color: none;
-  opacity: 1
 }
 
 .bonHolder{
+  position: relative;
+
   width: 95%;
-  min-height: 200px;
   max-width: 500px;
   height: auto;
-  margin: 0 auto;
-  background-color: red;
-  position: relative;
+  min-height: 200px;
+  margin: 5px auto;
+  padding: 10px;
+  border-radius: 5px;
+
+  text-align: center;
+
+
+  background-color: white;
 }
 .bonHolder span{
   position: absolute;
@@ -192,21 +233,34 @@ border: 1px solid black
   padding: 5px;
 }
 .bon{
-  width: calc(100% - 30px);
-  height: 75px;
-  border-radius: 5px;
-  margin: 5px;
-  padding: 10px;
-  background-color: white;
+  position: relative;
+  text-align: left;
   display: flex;
   flex-wrap: wrap;
+
+  width: calc(100% - 30px);
+  height: 75px;
+  margin: 5px;
+  padding: 10px;
+
+  border-radius: 5px;
+  background-color: #e1e3dd;
 
 }
 .bonImage{
   display: inline-flex;
-  height: 75px;
+
   width: 75px;
-  background-color: green;
+  height: 75px;
+
+  border: 1px solid black;
+
+  background-color: gray;
+  background-image: url("../image/placeholder.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
 }
 .bon h3 {
   text-transform: capitalize;
@@ -214,33 +268,51 @@ border: 1px solid black
 .bon input[type="number"]{
   width: 30px;
   height: 30px;
+
   text-align: center;
 }
-
+.printing{
+  width: 80%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 auto;
+  background-color: #FFC75F;
+  line-height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.printing:hover{
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+}
 
 /* javascript elementes */
 /* THese elements will be affected by javascript */
 /* WARNING: These wont work / show when you disable Js */
 .sideScroller {
-  width: 100%;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  width: 100%;
 }
 
 .overlay {
+  position: absolute;
+
   width: 100%;
   height: 100%;
-  background-color: black;
+
   opacity: 1;
+  background-color: black;
   background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
 }
 
 .checkMark{
   background-image: url("../image/check.png");
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: contain;
 }
 

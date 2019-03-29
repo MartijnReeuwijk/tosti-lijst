@@ -1,4 +1,3 @@
-// const dotenv = require("dotenv").config();
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
@@ -7,40 +6,35 @@ const compression = require("compression");
 const minifyHTML = require("express-minify-html");
 const bodyParser = require('body-parser');
 const data = require('./data.json');
-console.log(data);
-
 
 
 app.use((req, res, next) => {
   res.append("Access-Control-Allow-Origin", ["*"]);
   res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
   res.append("Access-Control-Allow-Headers", "Content-Type");
-  // res.append("Cache-Control", "max-age=" + 365 * 24 * 60 * 60);
+  res.append("Cache-Control", "max-age=" + 365 * 24 * 60 * 60);
   next();
 });
 
-// Used to minifyHTML the HTML
-// app.use(
-//   minifyHTML({
-//     override: true,
-//     exception_url: false,
-//     htmlMinifier: {
-//       removeComments: true,
-//       collapseWhitespace: true,
-//       collapseBooleanAttributes: true,
-//       removeAttributeQuotes: true,
-//       removeEmptyAttributes: true,
-//       minifyJS: true
-//     }
-//   })
-// );
+
+app.use(
+  minifyHTML({
+    override: true,
+    exception_url: false,
+    htmlMinifier: {
+      removeComments: true,
+      collapseWhitespace: true,
+      collapseBooleanAttributes: true,
+      removeAttributeQuotes: true,
+      removeEmptyAttributes: true,
+      minifyJS: true
+    }
+  })
+);
 
 
-
-// Used to compress with G-zip
 app.use(compression());
 app.use(bodyParser.urlencoded({ extended: false}))
-// set the view engine to ejs
 app.set("view engine", "ejs");
 app.use(express.static("static"));
 app.get("/", (req, res) => {
@@ -142,12 +136,8 @@ app.get("/sandwich", (req, res) => {
 });
 
 function bon(req, res) {
-  const brood = req.body.brood;
-  const zoet = req.body.zoet;
-  // const data = req.body;
-  // console.log(typeof data);
-  // console.log(data);
-// Make data array so it can make more tosties
+  const brood = req.body.brood || "Wit";
+  const zoet = req.body.zoet || "Hagelslag";
   console.log(brood , zoet);
   res.render('pages/bon.ejs', {
     title: "Uw boodschappen lijst",
