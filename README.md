@@ -89,6 +89,13 @@ Als de user javascript aan heeft staan, komt er een extra functionaliteit over h
 
 ![enhancement](https://github.com/MartijnReeuwijk/tosti-lijst/blob/master/readmeassets/enhancement.png)
 
+# Screen reader
+Ik heb GoogleVOX gebruikt als screen reader, deze kon alles goed voorlezen.
+Met gebruik van tags and names geeft hij de juiste namen terug aan de blinde gebruiker.
+
+# Tabs
+Er kan met tabs door de app worden genavigeert, zelf vindt ik de standaart volgorde van de HTML tab door een formulier niet logies, maar heb deze wel aangehouden.
+Hij gaat door de vragen met Tab maar om de opties te selecteren moet je dit met de pijltjes toets doen.
 
 ## Authors
 
