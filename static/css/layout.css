@@ -224,10 +224,13 @@ border: 1px solid black;
 
   background-color: white;
 }
-.bonHolder span{
+.bon span{
   position: absolute;
   top: 5px;
   right: 10px;
+}
+.bonHolder h3{
+  padding: 10px;
 }
 .bonInner{
   padding: 5px;
@@ -260,7 +263,9 @@ border: 1px solid black;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-
+}
+.bonImage img{
+  width: 100%;
 }
 .bon h3 {
   text-transform: capitalize;

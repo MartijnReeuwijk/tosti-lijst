@@ -1,7 +1,20 @@
-(function() {
-  "use strict";
+
+console.log("werkt");
+
+// window.addEventListener("load", function(){
+//   document.getElementById("bonHolder").classList.add('fadeOut')
+// });
+//
+// onclick="overlay(this.dataset.value, this.dataset.type)
+
+
+
+
+
+
   function buttonPlace() {
     var body = document.getElementById("body");
+    if (body) {
     body.innerHTML += `
     <div class="pushButton"></div>
       <div class="bottomButtonHolder transition">
@@ -10,6 +23,7 @@
         </a>
       </div>
       `;
+      }
   }
 
   window.onscroll = function(ev) {
@@ -19,7 +33,6 @@
         document.getElementsByClassName('bottomButtonHolder')[0].classList.remove('fadeOut')
       }
   };
-
 
   function removeVis() {
     var vis = document.getElementsByClassName('check-with-label')
@@ -37,7 +50,7 @@
 
   removeVis();
   buttonPlace();
-})();
+
 function overlay(a , b) {
     var overlay = document.getElementsByClassName(a)
     var htmlObject = document.getElementsByClassName(b)
@@ -47,3 +60,10 @@ function overlay(a , b) {
     });
     overlay[0].classList.add('fadeOut')
 }
+
+const opties = document.getElementsByClassName('opties');
+const optiesArray = Array.from(opties);
+
+optiesArray.forEach(elem => {
+  elem.addEventListener("click", overlay(elem.dataset.value, elem.dataset.type))
+});

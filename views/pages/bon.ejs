@@ -1,51 +1,40 @@
 <%- include('../partials/header'); -%>
-
 <body>
   <main>
     <section class="homeHolder">
       <h1><%= title %></h1>
 
-      <div class="bonHolder">
+      <div class="bonHolder" id="bonHolder">
         <div class="bon">
           <div class="bonImage">
+            <img src="<%= image[0] %>" alt="">
           </div>
           <div class="bonInner">
           <h3>brood: <%= brood %></h3>
-          <input type="number" name="hoeveelheidBrood" placeholder="1" value="1">
+          <input type="number" class="number" name="hoeveelheidBrood" placeholder="1" value="1">
             </div>
             <span>&#8364;1.45</span>
         </div>
 
         <div class="bon">
           <div class="bonImage">
+            <img src="<%= image[1] %>" alt="">
           </div>
           <div class="bonInner">
           <h3>zoet: <%= zoet %> </h3>
-          <input type="number" name="hoeveelheidBrood" placeholder="1" value="1">
+          <input type="number" class="number" name="hoeveelheidBrood" placeholder="1" value="1">
             </div>
             <span>&#8364;1.45</span>
         </div>
-
-        <div class="bon">
-          <div class="bonImage">
-          </div>
-          <div class="bonInner">
-          <h3>zoet: <%= zoet %> </h3>
-          <input type="number" name="hoeveelheidBrood" placeholder="1" value="1">
-            </div>
-            <span>&#8364;1.45</span>
-        </div>
-
-        <input type="button" class="printing" name="Print uw bon" value="Print uw bon">
-
-
-
+        <h3>Uw prijs: &#8364; <span id="currPrice">2.90<span></h3>
       </div>
       <!-- <div class="homeHolderIframePusher">
       </div> -->
       <iframe src="https://maps.google.com/maps?q=albert%20heijn%20amsterdam&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
     </section>
   </main>
+    <script src="javascript/bon.js" charset="utf-8"></script>
 </body>
+<%- include('../partials/footer'); -%>
 
 </html>
