@@ -1,4 +1,3 @@
-
 console.log("werkt");
 
 // window.addEventListener("load", function(){
@@ -7,14 +6,9 @@ console.log("werkt");
 //
 // onclick="overlay(this.dataset.value, this.dataset.type)
 
-
-
-
-
-
-  function buttonPlace() {
-    var body = document.getElementById("body");
-    if (body) {
+function buttonPlace() {
+  var body = document.getElementById("body");
+  if (body) {
     body.innerHTML += `
     <div class="pushButton"></div>
       <div class="bottomButtonHolder transition">
@@ -23,47 +17,58 @@ console.log("werkt");
         </a>
       </div>
       `;
-      }
   }
-
-  window.onscroll = function(ev) {
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-          document.getElementsByClassName('bottomButtonHolder')[0].classList.add('fadeOut')
-      }else {
-        document.getElementsByClassName('bottomButtonHolder')[0].classList.remove('fadeOut')
-      }
-  };
-
-  function removeVis() {
-    var vis = document.getElementsByClassName('check-with-label')
-    var visArray = Array.from(vis);
-
-    visArray.forEach(function(elem){
-        elem.classList.add('notVisable')
-    });
-  }
-
-  function horizonView() {
-
-  }
-
-
-  removeVis();
-  buttonPlace();
-
-function overlay(a , b) {
-    var overlay = document.getElementsByClassName(a)
-    var htmlObject = document.getElementsByClassName(b)
-    var selectedArray = Array.from(htmlObject);
-    selectedArray.forEach(function(overlay){
-      overlay.classList.remove('fadeOut')
-    });
-    overlay[0].classList.add('fadeOut')
 }
 
-const opties = document.getElementsByClassName('opties');
-const optiesArray = Array.from(opties);
+if (document.getElementsByClassName("bottomButtonHolder")[0]) {
+  window.onscroll = function(ev) {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      document
+        .getElementsByClassName("bottomButtonHolder")[0]
+        .classList.add("fadeOut");
+    } else {
+      document
+        .getElementsByClassName("bottomButtonHolder")[0]
+        .classList.remove("fadeOut");
+    }
+  };
+}
 
-optiesArray.forEach(elem => {
-  elem.addEventListener("click", overlay(elem.dataset.value, elem.dataset.type))
-});
+function removeVis() {
+  var vis = document.getElementsByClassName("check-with-label");
+  var visArray = Array.from(vis);
+  visArray.forEach(function(elem) {
+    elem.classList.add("notVisable");
+  });
+}
+
+function horizonView() {}
+
+// overlay(this.dataset.value, this.dataset.type)
+
+// onclick="overlay(this.dataset.value, this.dataset.type)
+
+function overlay(a) {
+  var overlay = document.getElementsByClassName(a.dataset.value);
+  var htmlObject = document.getElementsByClassName(a.dataset.type);
+  var selectedArray = Array.from(htmlObject);
+  selectedArray.forEach(function(overlay) {
+    overlay.classList.remove("fadeOut");
+  });
+  overlay[0].classList.add("fadeOut");
+}
+
+function addEvents() {
+  var opties = document.getElementsByClassName("opties");
+  var optiesArray = Array.from(opties);
+  for (let i = 0; i < optiesArray.length; i++) {
+    optiesArray[i].addEventListener("click", function() {
+      overlay(this)
+    });
+  }
+}
+
+
+removeVis();
+buttonPlace();
+addEvents();

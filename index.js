@@ -7,13 +7,13 @@ const minifyHTML = require("express-minify-html");
 const bodyParser = require("body-parser");
 const data = require("./data.json");
 
-app.use((req, res, next) => {
-  res.append("Access-Control-Allow-Origin", ["*"]);
-  res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-  res.append("Access-Control-Allow-Headers", "Content-Type");
-  res.append("Cache-Control", "max-age=" + 365 * 24 * 60 * 60);
-  next();
-});
+// app.use((req, res, next) => {
+//   res.append("Access-Control-Allow-Origin", ["*"]);
+//   res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+//   res.append("Access-Control-Allow-Headers", "Content-Type");
+//   res.append("Cache-Control", "max-age=" + 365 * 24 * 60 * 60);
+//   next();
+// });
 
 // app.use(
 //   minifyHTML({

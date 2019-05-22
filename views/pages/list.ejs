@@ -9,7 +9,7 @@
         <!-- This will be  -->
         <div class="sideScroller">
           <% bread.forEach(function(data){ %>
-          <label for="<%= data.name %>" data-value="<%= data.name %>" data-type="<%= data.value %>" style="background-image: url(<%= data.url %>)" onclick="overlay(this.dataset.value, this.dataset.type)" class=" opties label-for-check borderRadius hoverShadow transition">
+          <label for="<%= data.name %>" data-value="<%= data.name %>" data-type="<%= data.value %>" style="background-image: url(<%= data.url %>)" class=" opties label-for-check borderRadius hoverShadow transition">
             <div class="overlay transition fadeOut <%= data.name %>  <%= data.value %>"></div>
             <div class="textHolderOptions">
               <p >
@@ -26,7 +26,7 @@
         <div class="sideScroller">
 
           <% topping.forEach(function(data){ %>
-          <label for="<%= data.name %>" data-value="<%= data.name %>" data-type="<%= data.value %>" style="background-image: url(<%= data.url %>)" onclick="overlay(this.dataset.value, this.dataset.type)" class=" opties label-for-check borderRadius hoverShadow transition">
+          <label for="<%= data.name %>" data-value="<%= data.name %>" data-type="<%= data.value %>" style="background-image: url(<%= data.url %>)" class=" opties label-for-check borderRadius hoverShadow transition">
             <div class="overlay transition fadeOut <%= data.name %>  <%= data.value %>"></div>
             <div class="textHolderOptions">
               <p>
